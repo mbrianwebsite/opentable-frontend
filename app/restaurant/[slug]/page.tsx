@@ -1,6 +1,14 @@
+"use client";
+
 import NavBar from "@/app/components/NavBar";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function RestaurantDetails() {
+  const router = useRouter();
+  const findTime = () => {
+    router.push("/reserve/go-go");
+  };
   return (
     <main className="bg-gray-100 min-h-screen w-screen">
       <main className="max-w-screen-2xl m-auto bg-white">
@@ -19,14 +27,14 @@ export default function RestaurantDetails() {
           <div className="bg-white w-[70%] rounded p-3 shadow">
             {/* RESAURANT NAVBAR */}
             <nav className="flex text-reg border-b pb-2">
-              <a href="" className="mr-7">
+              <Link href={"/restaurant/go-go/"} className="mr-7">
                 {" "}
                 Overview{" "}
-              </a>
-              <a href="" className="mr-7">
+              </Link>
+              <Link href={"/restaurant/go-go/menu"} className="mr-7">
                 {" "}
                 Menu{" "}
-              </a>
+              </Link>
             </nav>
             {/* RESAURANT NAVBAR */} {/* TITLE */}
             <div className="mt-4 border-b pb-6">
@@ -150,7 +158,10 @@ export default function RestaurantDetails() {
                 </div>
               </div>
               <div className="mt-5">
-                <button className="bg-red-600 rounded w-full px-4 text-white font-bold h-16">
+                <button
+                  className="bg-red-600 rounded w-full px-4 text-white font-bold h-16"
+                  onClick={findTime}
+                >
                   Find a Time
                 </button>
               </div>

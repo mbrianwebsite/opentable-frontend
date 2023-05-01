@@ -1,4 +1,5 @@
 import NavBar from "@/app/components/NavBar";
+import Link from "next/link";
 
 export default function RestaurantMenu() {
   return (
@@ -19,14 +20,14 @@ export default function RestaurantMenu() {
           <div className="bg-white w-[100%] rounded p-3 shadow">
             {/* RESAURANT NAVBAR */}
             <nav className="flex text-reg border-b pb-2">
-              <a href="" className="mr-7">
+              <Link href={"/restaurant/go-go/"} className="mr-7">
                 {" "}
                 Overview{" "}
-              </a>
-              <a href="" className="mr-7">
+              </Link>
+              <Link href={"/restaurant/go-go/menu"} className="mr-7">
                 {" "}
                 Menu{" "}
-              </a>
+              </Link>
             </nav>
             {/* RESAURANT NAVBAR */} {/* MENU */}
             <main className="bg-white mt-5">
