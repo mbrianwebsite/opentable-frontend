@@ -1,13 +1,9 @@
-"use client";
-import { useState } from "react";
 import NavBar from "./components/NavBar";
 
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import SearchBar from "./components/SearchBar";
 
 export default function Home() {
-  const router = useRouter();
-  const [location, setLocation] = useState("");
   return (
     <main className="bg-gray-100 min-h-screen w-screen">
       <main className="max-w-screen-2xl m-auto bg-white">
@@ -22,23 +18,7 @@ export default function Home() {
                 Find your table for any occasion
               </h1>
               {/* SEARCH BAR */}
-              <div className="text-left text-lg py-3 m-auto flex justify-center">
-                <input
-                  className="rounded  mr-3 p-2 w-[450px]"
-                  type="text"
-                  placeholder="State, city or town"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                />
-                <button
-                  className="rounded bg-red-600 px-9 py-2 text-white"
-                  onClick={() => {
-                    router.push(`/search`);
-                  }}
-                >
-                  Let's go
-                </button>
-              </div>
+              <SearchBar />
               {/* SEARCH BAR */}
             </div>
           </div>
