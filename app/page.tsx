@@ -1,28 +1,19 @@
-import NavBar from "./components/NavBar";
-
 import Header from "./components/Header";
 import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
-      <main className="max-w-screen-2xl m-auto bg-white">
-        {/* NAVBAR */}
-        <NavBar />
-        {/* NAVBAR */}
-        <main>
-          {/* HEADER */}
-          <Header />
-          {/* HEADER */}
-          {/* CARDS */}
-          <div className="py-3 px-36 mt-10 flex flex-wrap justify-center">
-            {/* CARD */}
-            <Card />
-            {/* CARD */}
-          </div>
-          {/* CARDS */}
-        </main>
-      </main>
+    <main>
+      {/* HEADER */}
+      <Header />
+      {/* HEADER */}
+      {/* CARDS */}
+      <div className="py-3 px-36 mt-10 flex flex-wrap justify-start">
+        {/* CARD */}
+        <Card />
+        {/* CARD */}
+      </div>
+      {/* CARDS */}
     </main>
   );
 }

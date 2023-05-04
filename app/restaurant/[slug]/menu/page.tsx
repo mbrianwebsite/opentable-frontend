@@ -1,32 +1,25 @@
-import NavBar from "@/app/components/NavBar";
-import Link from "next/link";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import RestaurantNavbar from "./components/RestaurantNavbar";
 
 export default function RestaurantMenu() {
   return (
-    <main className="bg-gray-100 min-h-screen w-screen">
-      <main className="max-w-screen-2xl m-auto bg-white">
-        {/* NAVBAR */}
-        <NavBar />
-        {/* NAVBAR */}
-        {/* HEADER */}
-        <Header />
-        {/* HEADER */}
-        {/* DESCRIPTION PORTION */}
-        <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
-          <div className="bg-white w-[100%] rounded p-3 shadow">
-            {/* RESAURANT NAVBAR */}
-            <RestaurantNavbar />
-            {/* RESAURANT NAVBAR */}
-            {/* MENU */}
-            <Menu />
-            {/* MENU */}
-          </div>
+    <>
+      {/* HEADER */}
+      <Header />
+      {/* HEADER */}
+      {/* DESCRIPTION PORTION */}
+      <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
+        <div className="bg-white w-[100%] rounded p-3 shadow">
+          {/* RESAURANT NAVBAR */}
+          <RestaurantNavbar />
+          {/* RESAURANT NAVBAR */}
+          {/* MENU */}
+          <Menu />
+          {/* MENU */}
         </div>
-        {/* DESCRIPTION PORTION */}
-      </main>
-    </main>
+      </div>
+      {/* DESCRIPTION PORTION */}
+    </>
   );
 }
