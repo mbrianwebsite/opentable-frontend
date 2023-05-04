@@ -1,5 +1,4 @@
 import NavBar from "@/app/components/NavBar";
-import Link from "next/link";
 import Header from "./components/Header";
 import Title from "./components/Title";
 import Rating from "./components/Rating";
